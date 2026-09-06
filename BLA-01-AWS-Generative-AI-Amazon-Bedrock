@@ -2,11 +2,9 @@ AWS AI Practitioner – Generative AI & Amazon Bedrock
 Overview
 
 This document contains the transcripts and learning material for the first three videos in my AWS Certified AI Practitioner learning series.
-
 The three videos are designed to build progressively from foundational concepts into practical implementation and real-world application of Generative AI using AWS services, with a primary focus on Amazon Bedrock.
-
-The series begins by establishing the fundamental concepts behind Generative AI, foundation models, and Large Language Models. It then moves into practical interaction with Amazon Bedrock and foundation models before progressing into real-world applications, security, monitoring, evaluation, and best practices.
-
+The series begins by establishing the fundamental concepts behind Generative AI, foundation models, and Large Language Models. 
+It then moves into practical interaction with Amazon Bedrock and foundation models before progressing into real-world applications, security, monitoring, evaluation, and best practices.
 Together, these three videos provide a foundation for understanding how Generative AI solutions can be designed and implemented using AWS.
 
 Video 1 – Generative AI & Amazon Bedrock
@@ -20,14 +18,12 @@ Foundation models
 Large Language Models
 Amazon Bedrock
 Amazon Titan
-Amazon Nova and Nova 2
 Foundation model selection
 Fine-tuning
 Supervised fine-tuning
 Reinforcement fine-tuning
 Model distillation
 Model evaluation
-Benchmark datasets
 Human evaluation
 ROUGE
 BLEU
@@ -55,9 +51,7 @@ The purpose of this video is to establish the vocabulary and concepts needed to 
 Video 2 – Amazon Bedrock: Practical Implementation
 
 The second video takes the concepts introduced in Video 1 and moves into practical implementation.
-
 The focus is on understanding how an application can interact with foundation models through Amazon Bedrock.
-
 Topics covered include:
 
 Selecting a foundation model
@@ -97,7 +91,6 @@ The purpose of this video is to bridge the gap between understanding Generative 
 Video 3 – Amazon Bedrock: Applications, Security & Best Practices
 
 The third video expands on the previous two videos by looking at how Generative AI technologies can be applied to real-world applications.
-
 The focus shifts toward architecture, external knowledge, security, evaluation, monitoring, and cost considerations.
 
 Topics covered include:
@@ -236,19 +229,13 @@ Understanding AWS pricing
 Balancing performance, latency, and cost
 
 The intention is to document not only the final results, but also the problems encountered along the way and how they were resolved.
-
 Continuing the Series
-
 These three videos represent the beginning of the AWS AI Practitioner learning journey.
-
 Additional videos will build upon these concepts and explore other AWS AI services, practical implementations, architecture, security, responsible AI, machine learning concepts, and additional Generative AI use cases.
-
 As the series continues, this document may be expanded or additional files may be created for subsequent sections of the learning journey.
 
 Document Purpose
 
 This file serves as a combined reference for the first three videos in the series.
-
 The individual video content can be reviewed as a complete learning module, while the main repository README provides the broader context for the overall AWS AI Practitioner learning journey.
-
 The objective is to create a record of both the knowledge gained and the practical experience developed throughout the learning process.
