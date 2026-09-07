@@ -2,15 +2,12 @@ Amazon Bedrock
 Overview
 
 Amazon Bedrock is a fully managed AWS service that provides access to foundation models (FMs) from different AI model providers through a unified AWS environment.
-
 It allows developers to build and integrate Generative AI applications without having to manage the underlying infrastructure required to run the foundation models.
-
 As part of BLA 01, I studied Amazon Bedrock and several of the concepts used when building Generative AI applications, including foundation models, model inference, APIs, Guardrails, embeddings, tokenization, and fine-tuning.
 
 Purpose of the Activity
 
 The purpose of this activity was to understand how Amazon Bedrock can be used to work with foundation models and build Generative AI applications.
-
 The activity focused on understanding:
 
 What Amazon Bedrock is
@@ -26,15 +23,12 @@ How APIs can be used to interact with foundation models
 What is Amazon Bedrock?
 
 Amazon Bedrock is an AWS service that provides access to foundation models through APIs.
-
 Instead of building and maintaining the infrastructure needed to train and host large AI models, developers can use models available through Bedrock and integrate them into their applications.
-
 Amazon Bedrock can be used to build applications that generate and process content using Generative AI models.
 
 Foundation Models
 
 A foundation model (FM) is a large, pre-trained AI model that can be adapted or used for many different tasks.
-
 Foundation models can be used for tasks such as:
 
 Text generation
@@ -48,7 +42,6 @@ Semantic search
 Other Generative AI applications
 
 Amazon Bedrock provides access to foundation models from multiple providers.
-
 The model selected depends on the requirements of the application, such as:
 
 Type of task
@@ -60,17 +53,13 @@ Supported capabilities
 Model Inference
 
 Inference is the process of using a trained model to generate an output from an input.
-
 For example, a user can provide a prompt asking a model to explain a technical concept. The model processes the input and generates a response.
-
 In Amazon Bedrock, applications can send requests to a foundation model and receive generated responses.
-
 Inference can be performed through APIs and can be integrated into applications.
 
 APIs
 
 Amazon Bedrock provides APIs that applications can use to interact with foundation models.
-
 A typical interaction involves:
 
 The application creates a request.
@@ -85,13 +74,9 @@ This makes it possible to integrate Generative AI capabilities into applications
 Prompting
 
 A prompt is the input provided to a Generative AI model.
-
 For example:
-
 Explain what Amazon S3 is to someone who has never used AWS.
-
 The quality and structure of a prompt can influence the model's response.
-
 Important prompting concepts include:
 
 Clear instructions
@@ -106,7 +91,6 @@ Prompt engineering is therefore an important skill when working with Generative 
 Tokenization
 
 Language models process text using tokens.
-
 A token can represent:
 
 A complete word
@@ -204,9 +188,6 @@ Amazon Bedrock can be used as the AI service layer between an application and a 
 An application can send a request to Amazon Bedrock through an API. Bedrock then interacts with the selected foundation model and returns the generated response to the application.
 Additional capabilities such as Guardrails, embeddings, knowledge bases, RAG, and model customization can be incorporated depending on the requirements of the application.
 
-
-
-
 Examples of possible issues include:
 
 Model access or availability
@@ -255,4 +236,4 @@ References / Resources
 AWS Amazon Bedrock documentation
 AWS Generative AI documentation
 AWS Skill Builder
-AWS Certified AI Practitioner learning materials Udemy
+AWS Certified AI Practitioner learning materials Udemy Stephane Maarek
