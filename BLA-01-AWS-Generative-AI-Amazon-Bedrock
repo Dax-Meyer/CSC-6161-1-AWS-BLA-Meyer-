@@ -1,241 +1,258 @@
-AWS AI Practitioner – Generative AI & Amazon Bedrock
+Amazon Bedrock
 Overview
 
-This document contains the transcripts and learning material for the first three videos in my AWS Certified AI Practitioner learning series.
-The three videos are designed to build progressively from foundational concepts into practical implementation and real-world application of Generative AI using AWS services, with a primary focus on Amazon Bedrock.
-The series begins by establishing the fundamental concepts behind Generative AI, foundation models, and Large Language Models. 
-It then moves into practical interaction with Amazon Bedrock and foundation models before progressing into real-world applications, security, monitoring, evaluation, and best practices.
-Together, these three videos provide a foundation for understanding how Generative AI solutions can be designed and implemented using AWS.
+Amazon Bedrock is a fully managed AWS service that provides access to foundation models (FMs) from different AI model providers through a unified AWS environment.
 
-Video 1 – Generative AI & Amazon Bedrock
+It allows developers to build and integrate Generative AI applications without having to manage the underlying infrastructure required to run the foundation models.
 
-The first video focuses on the fundamental concepts required to understand Generative AI and foundation models.
+As part of BLA 01, I studied Amazon Bedrock and several of the concepts used when building Generative AI applications, including foundation models, model inference, APIs, Guardrails, embeddings, tokenization, and fine-tuning.
 
-Topics covered include:
+Purpose of the Activity
 
-Generative AI
-Foundation models
-Large Language Models
-Amazon Bedrock
-Amazon Titan
-Foundation model selection
-Fine-tuning
-Supervised fine-tuning
-Reinforcement fine-tuning
-Model distillation
-Model evaluation
-Human evaluation
-ROUGE
-BLEU
-BERTScore
-Perplexity
-Business metrics
-Retrieval-Augmented Generation
-Vector databases
-Embeddings
+The purpose of this activity was to understand how Amazon Bedrock can be used to work with foundation models and build Generative AI applications.
+
+The activity focused on understanding:
+
+What Amazon Bedrock is
+How foundation models are accessed through Bedrock
+How applications interact with models
+How prompts are processed
+How tokens and tokenization work
+What embeddings are and how they are used
+How models can be customized
+How fine-tuning works
+How Amazon Bedrock Guardrails can help control AI interactions
+How APIs can be used to interact with foundation models
+What is Amazon Bedrock?
+
+Amazon Bedrock is an AWS service that provides access to foundation models through APIs.
+
+Instead of building and maintaining the infrastructure needed to train and host large AI models, developers can use models available through Bedrock and integrate them into their applications.
+
+Amazon Bedrock can be used to build applications that generate and process content using Generative AI models.
+
+Foundation Models
+
+A foundation model (FM) is a large, pre-trained AI model that can be adapted or used for many different tasks.
+
+Foundation models can be used for tasks such as:
+
+Text generation
+Question answering
+Summarization
+Classification
+Content generation
+Code generation
+Image generation
+Semantic search
+Other Generative AI applications
+
+Amazon Bedrock provides access to foundation models from multiple providers.
+
+The model selected depends on the requirements of the application, such as:
+
+Type of task
+Performance
+Cost
+Response quality
+Context requirements
+Supported capabilities
+Model Inference
+
+Inference is the process of using a trained model to generate an output from an input.
+
+For example, a user can provide a prompt asking a model to explain a technical concept. The model processes the input and generates a response.
+
+In Amazon Bedrock, applications can send requests to a foundation model and receive generated responses.
+
+Inference can be performed through APIs and can be integrated into applications.
+
+APIs
+
+Amazon Bedrock provides APIs that applications can use to interact with foundation models.
+
+A typical interaction involves:
+
+The application creates a request.
+The request contains the input or prompt.
+Amazon Bedrock sends the request to the selected model.
+The model processes the input.
+The model generates a response.
+The response is returned to the application.
+
+This makes it possible to integrate Generative AI capabilities into applications without manually hosting the model.
+
+Prompting
+
+A prompt is the input provided to a Generative AI model.
+
+For example:
+
+Explain what Amazon S3 is to someone who has never used AWS.
+
+The quality and structure of a prompt can influence the model's response.
+
+Important prompting concepts include:
+
+Clear instructions
+Providing context
+Defining the desired output
+Giving examples when appropriate
+Specifying constraints
+Avoiding unnecessary ambiguity
+
+Prompt engineering is therefore an important skill when working with Generative AI.
+
 Tokenization
-Context windows
-Amazon Bedrock Guardrails
-Amazon Bedrock Agents
-Amazon CloudWatch
-Bedrock pricing
-Batch inference
-Provisioned Throughput
-Prompt engineering
-Temperature
-Top-K
-Top-P
 
-The purpose of this video is to establish the vocabulary and concepts needed to understand the rest of the series.
+Language models process text using tokens.
 
-Video 2 – Amazon Bedrock: Practical Implementation
+A token can represent:
 
-The second video takes the concepts introduced in Video 1 and moves into practical implementation.
-The focus is on understanding how an application can interact with foundation models through Amazon Bedrock.
-Topics covered include:
+A complete word
+Part of a word
+A character
+Punctuation
+Other pieces of text
 
-Selecting a foundation model
-Sending prompts to Amazon Bedrock
-Prompt engineering
-Inference parameters
-Temperature
-Maximum output tokens
-Top-K
-Top-P
-Using AWS APIs
-Integrating Bedrock with applications
-Fine-tuning
-Supervised fine-tuning
-Reinforcement fine-tuning
-Building a basic Generative AI application
+Text is converted into tokens before being processed by a language model.
+Understanding tokens is important because models have limits related to the amount of information they can process in a request.
+Token usage can also affect the cost of using Generative AI services.
 
-The basic application flow explored in this video is:
-
-User
-  |
-Application
-  |
-Amazon Bedrock
-  |
-Foundation Model
-  |
-Generated Response
-  |
-Application
-  |
-User
-
-
-The purpose of this video is to bridge the gap between understanding Generative AI concepts and actually interacting with foundation models through AWS.
-
-Video 3 – Amazon Bedrock: Applications, Security & Best Practices
-
-The third video expands on the previous two videos by looking at how Generative AI technologies can be applied to real-world applications.
-The focus shifts toward architecture, external knowledge, security, evaluation, monitoring, and cost considerations.
-
-Topics covered include:
-
-Real-world Generative AI applications
-Retrieval-Augmented Generation
 Embeddings
-Vector databases
-Knowledge retrieval
-Amazon Bedrock Agents
-Action groups
-Guardrails
-IAM
-Least-privilege access
-Security considerations
-Model evaluation
-Automated evaluation
-Human evaluation
-ROUGE
-BLEU
-BERTScore
-Perplexity
-Benchmark datasets
-Amazon CloudWatch
-Logging
-Monitoring
-Metrics
-Alarms
-Bedrock pricing
-Cost optimization
-Model selection
-Performance considerations
-Latency
-AI application best practices
 
-A more advanced application can be represented conceptually as:
+An embedding is a numerical representation of information, such as text.
+Instead of representing text only as words, an embedding represents the meaning or characteristics of the text as a vector.
+Embeddings are useful for applications that need to compare the meaning of different pieces of information.
 
-User
-  |
-Application
-  |
+Common use cases include:
+
+Semantic search
+Similarity searches
+Knowledge bases
+Recommendation systems
+Retrieval-Augmented Generation (RAG)
+Retrieval-Augmented Generation (RAG)
+
+Retrieval-Augmented Generation (RAG) combines information retrieval with Generative AI.
+
+Instead of relying only on the information contained within a model, an application can retrieve relevant information from an external knowledge source and provide it to the model.
+RAG can be useful when an application needs to generate responses based on specific or external information.
+For example, a company could use RAG to allow an AI application to answer questions using internal company documents.
+
+Fine-Tuning
+
+Fine-tuning involves adapting a pre-trained model using additional data for a specific purpose or use case.
+Fine-tuning can be useful when an organization needs model behavior that is better suited to a particular task or domain.
+It is important to distinguish fine-tuning from prompting. Prompting changes the instructions provided to a model, while fine-tuning changes the model using additional training.
+
+Amazon Bedrock Guardrails
+
+Amazon Bedrock Guardrails help organizations apply controls to Generative AI applications.
+Guardrails can be used to help control interactions between users and foundation models.
+
+They can help address areas such as:
+
+Harmful content
+Undesired topics
+Sensitive information
+Unsafe inputs
+Unsafe outputs
+Responsible AI requirements
+
+Guardrails are an important part of developing AI applications that need additional safety and content controls.
+
+AWS Services and Technologies Used
+AWS Services
 Amazon Bedrock
-  |
-Guardrails
-  |
-Knowledge Base / RAG
-  |
-Foundation Model
-  |
-Response
-  |
-User
-
-
-The purpose of this video is to demonstrate how the individual concepts introduced throughout the series can work together as part of a larger Generative AI solution.
-
-How the Three Videos Connect
-
-The three videos are intended to build upon one another.
-
-Video 1
-Foundations
-    |
-    v
+Amazon Bedrock Guardrails
+[Add additional AWS services used]
+Technologies and Concepts
 Generative AI
 Foundation Models
-LLMs
-Amazon Bedrock
-    |
-    v
-Video 2
-Practical Implementation
-    |
-    v
-Prompts
-Inference
+Large Language Models
 APIs
-Model Interaction
-    |
-    v
-Video 3
-Real-World Applications
-    |
-    v
+Prompt Engineering
+Tokenization
+Tokens
+Embeddings
+Fine-Tuning
+Retrieval-Augmented Generation
+Responsible AI
+Programming Languages
+[Add language used, such as Python, if applicable]
+Databases / Data Sources
+[Add database or data source if applicable]
+Major Steps Completed
+
+During the Amazon Bedrock portion of BLA 01, I:
+
+Learned what Amazon Bedrock is and what it is used for.
+Studied foundation models.
+Learned how applications interact with models through APIs.
+Studied model inference.
+Learned the fundamentals of prompt engineering.
+Studied tokens and tokenization.
+Learned how embeddings represent information.
+Studied Retrieval-Augmented Generation.
+Learned the purpose of fine-tuning.
+Studied Amazon Bedrock Guardrails.
+Reviewed how these technologies can be combined to create Generative AI applications.
+Architecture / Design
+
+Amazon Bedrock can be used as the AI service layer between an application and a foundation model.
+An application can send a request to Amazon Bedrock through an API. Bedrock then interacts with the selected foundation model and returns the generated response to the application.
+Additional capabilities such as Guardrails, embeddings, knowledge bases, RAG, and model customization can be incorporated depending on the requirements of the application.
+
+
+
+
+Examples of possible issues include:
+
+Model access or availability
+IAM permissions
+API configuration
+Incorrect request parameters
+Guardrail configuration
+Token or context limitations
+
+Problems were addressed by reviewing AWS documentation, checking configurations, and troubleshooting the relevant AWS services.
+
+
+For technical issues, I reviewed the error messages and AWS documentation to identify the cause and determine the appropriate solution.
+
+Results / Output
+
+The main result of this activity was gaining a better understanding of how Amazon Bedrock supports Generative AI development.
+I learned how Amazon Bedrock can provide access to foundation models and how different capabilities can be used to build AI applications.
+I also developed a better understanding of:
+
+Foundation models
+Model inference
+APIs
+Prompt engineering
+Tokens and tokenization
+Embeddings
 RAG
-Agents
-Guardrails
-Security
-Evaluation
-Monitoring
-Cost
+Fine-tuning
+Amazon Bedrock Guardrails
 
 
-The overall progression is:
+The Amazon Bedrock activity helped me understand how AWS can be used to build Generative AI applications without having to manage the underlying infrastructure for foundation models.
+One of the most important things I learned was how several different concepts work together. Tokens and tokenization help explain how models process text, while embeddings allow information to be represented numerically and compared based on meaning.
+I also learned the difference between prompting, RAG, and fine-tuning. These approaches can be used in different situations depending on how much customization and external information an application needs.
+Learning about Amazon Bedrock Guardrails also showed me the importance of responsible AI. Generative AI applications need appropriate controls to help prevent unsafe or inappropriate inputs and outputs.
+Overall, this activity gave me a strong foundation for continuing to work with Amazon Bedrock and Generative AI.
 
-Understand the concepts → Use the technology → Build and evaluate real-world solutions
+YouTube Links
+Video 1 - https://youtu.be/8fT0LdtcpRE
+Video 2 - https://youtu.be/XZrBbhJDgZ8
+Video 3 - https://youtu.be/2-9ZmjHcZoA
 
-Learning Goals
-
-By completing these three videos, the goal is to develop an understanding of:
-
-What Generative AI is and how it differs from traditional AI and machine learning approaches.
-What foundation models are and why they are useful.
-How Large Language Models generate responses.
-How Amazon Bedrock provides access to foundation models.
-How to interact with models through prompts and APIs.
-How prompt engineering can influence model responses.
-How RAG can provide models with external information.
-How embeddings and vector databases support semantic search.
-How agents can perform multi-step tasks.
-How guardrails can help control model interactions.
-How AI applications can be monitored and evaluated.
-How security and IAM apply to Generative AI applications.
-How model selection affects performance, latency, and cost.
-How these concepts fit together when designing AI applications on AWS.
-Challenges and Lessons Learned
-
-As part of this learning process, challenges encountered while studying or implementing these concepts will be documented alongside the videos.
-
-These may include:
-
-Understanding new AI terminology
-Selecting appropriate foundation models
-Understanding model capabilities and limitations
-Working with Amazon Bedrock
-Configuring AWS services
-Managing IAM permissions
-Understanding API interactions
-Troubleshooting application errors
-Working with RAG and embeddings
-Understanding vector search
-Configuring agents and guardrails
-Evaluating model responses
-Monitoring AI applications
-Understanding AWS pricing
-Balancing performance, latency, and cost
-
-The intention is to document not only the final results, but also the problems encountered along the way and how they were resolved.
-Continuing the Series
-These three videos represent the beginning of the AWS AI Practitioner learning journey.
-Additional videos will build upon these concepts and explore other AWS AI services, practical implementations, architecture, security, responsible AI, machine learning concepts, and additional Generative AI use cases.
-As the series continues, this document may be expanded or additional files may be created for subsequent sections of the learning journey.
-
-Document Purpose
-
-This file serves as a combined reference for the first three videos in the series.
-The individual video content can be reviewed as a complete learning module, while the main repository README provides the broader context for the overall AWS AI Practitioner learning journey.
-The objective is to create a record of both the knowledge gained and the practical experience developed throughout the learning process.
+LinkedIn Post Links
+[Add LinkedIn post link]
+References / Resources
+AWS Amazon Bedrock documentation
+AWS Generative AI documentation
+AWS Skill Builder
+AWS Certified AI Practitioner learning materials Udemy
