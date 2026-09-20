@@ -778,7 +778,7 @@ One of the most important concepts I learned was that Prompt Engineering is an i
 
 A practical approach is:
 
-```text
+
 Define the Task
       ↓
 Provide Context
@@ -792,7 +792,6 @@ Measure
 Improve
       ↓
 Test Again
-```
 
 I also learned that prompt design and application security are separate concerns. While prompts can guide model behavior, production AI applications require additional security controls such as authentication, authorization, access controls, input and output validation, tool restrictions, monitoring, and human oversight.
 
@@ -812,11 +811,11 @@ Video 6 - https://youtu.be/raGxgUtlvfo
 
 # LinkedIn Post Links
 
-Video 4 - [Add LinkedIn Post Link]
+Video 4 - https://lnkd.in/p/gHApYfq5
 
-Video 5 - [Add LinkedIn Post Link]
+Video 5 - https://lnkd.in/p/g3_dG7i5
 
-Video 6 - [Add LinkedIn Post Link]
+Video 6 - https://lnkd.in/p/gVjTxVnr
 
 ---
 
