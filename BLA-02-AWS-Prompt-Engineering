@@ -1,1 +1,831 @@
+# Prompt Engineering
+
+## Overview
+
+Prompt Engineering is the process of designing, developing, and optimizing prompts to guide Generative AI and Large Language Models toward useful and appropriate outputs for specific tasks.
+
+As part of my AI Practitioner Series, Videos 4–6 focus on Prompt Engineering and how prompting techniques can be applied when developing Generative AI applications.
+
+The three-part series covers the theory behind prompt engineering, practical implementation, prompt templates, structured outputs, Retrieval-Augmented Generation (RAG), testing and evaluation, real-world use cases, prompt injection, and security considerations.
+
+The series focuses on understanding how prompts interact with foundation models and how prompt design can be incorporated into a larger AI application rather than treating prompting as simply asking a model a question.
+
+---
+
+# Purpose of the Activity
+
+The purpose of this activity was to develop a stronger understanding of Prompt Engineering and how it can be applied when building Generative AI applications.
+
+The activity focused on understanding:
+
+* What Prompt Engineering is
+* How prompts are structured
+* How Large Language Models generate text
+* How system prompts influence model behavior
+* How model parameters affect responses
+* Zero-shot prompting
+* One-shot prompting
+* Few-shot prompting
+* Prompt templates
+* Structured outputs
+* Retrieval-Augmented Generation
+* Testing and evaluating prompts
+* Real-world Prompt Engineering use cases
+* Prompt injection
+* Indirect prompt injection
+* Security considerations
+* Least-privilege access
+* Output validation
+* Tool restrictions
+* Human oversight
+
+---
+
+# What is Prompt Engineering?
+
+Prompt Engineering is the process of designing, developing, and optimizing prompts to produce better results from Generative AI models.
+
+A prompt provides instructions and information that guide a model toward a desired response.
+
+A prompt can contain several different components, including:
+
+* Instructions
+* Context
+* Input data
+* Expected output
+* Constraints
+* Negative instructions
+* Examples
+
+The structure and clarity of a prompt can influence the quality, consistency, and usefulness of the model's response.
+
+Prompt Engineering is therefore an important skill when developing applications that use Large Language Models and other foundation models.
+
+---
+
+# Prompt Components
+
+An effective prompt can contain several components.
+
+## Instructions
+
+Instructions tell the model what task it should perform.
+
+For example:
+
+> Summarize the following document.
+
+Instructions provide the primary task that the model should complete.
+
+## Context
+
+Context provides additional information that helps the model understand the situation or task.
+
+For example, a prompt could explain the intended audience, purpose, or background information before asking the model to generate a response.
+
+## Input Data
+
+Input data is the information that the model should process.
+
+This could include:
+
+* A question
+* A document
+* Customer information
+* Text
+* Code
+* Retrieved information
+
+## Output Requirements
+
+The prompt can specify what the response should look like.
+
+For example, an application may request:
+
+* A summary
+* A list
+* A classification
+* JSON
+* A specific number of items
+* A particular writing style
+
+## Negative Instructions
+
+Negative instructions can be used to tell a model what it should avoid doing.
+
+They can help reduce unwanted behavior or content.
+
+However, negative prompting should not be considered a complete security mechanism. Application-level security controls are still required when developing production AI applications.
+
+---
+
+# How Large Language Models Generate Text
+
+Large Language Models generate text by predicting tokens.
+
+A token can represent:
+
+* A complete word
+* Part of a word
+* Punctuation
+* Other pieces of text
+
+A simplified process can be represented as:
+
+1. The model receives a prompt.
+2. The model predicts the next token.
+3. The predicted token is added to the generated response.
+4. The model predicts the next token.
+5. The process continues until the response is completed.
+
+This process helps explain why model parameters and prompt design can influence the generated response.
+
+---
+
+# System Prompts
+
+A system prompt establishes instructions that influence how the model should behave.
+
+System prompts can define:
+
+* The role of the model
+* Expected behavior
+* Response style
+* Rules
+* Restrictions
+* General instructions
+
+System prompts can be useful for establishing consistent behavior across interactions with an AI application.
+
+---
+
+# Model Parameters
+
+Generative AI models can provide parameters that influence how responses are generated.
+
+The series covers several common parameters.
+
+## Temperature
+
+Temperature influences the randomness of model output.
+
+Higher values can allow for more variation, while lower values can produce more predictable responses.
+
+## Top P
+
+Top P controls token selection based on cumulative probability.
+
+It can be used to limit the set of possible tokens considered during generation.
+
+## Top K
+
+Top K limits token selection to a specified number of high-probability candidates.
+
+## Maximum Output Length
+
+Maximum output length controls how many tokens the model can generate in its response.
+
+## Stop Sequences
+
+Stop sequences can specify text or tokens that cause generation to stop.
+
+The availability and behavior of these parameters can vary between different models and providers.
+
+---
+
+# Prompt Latency
+
+Prompt latency refers to the time required to process a request and generate a response.
+
+Factors that can influence latency include:
+
+* Model selection
+* Amount of input
+* Amount of output
+* Number of tokens
+* Infrastructure
+* Network conditions
+
+Larger prompts and longer responses generally require more tokens to process.
+
+Model selection and token usage can therefore have an important effect on application performance.
+
+---
+
+# Prompting Techniques
+
+## Zero-Shot Prompting
+
+Zero-shot prompting provides a task or instruction without providing examples.
+
+For example:
+
+> Classify the following customer message as positive, negative, or neutral.
+
+The model is expected to perform the task based on the instructions alone.
+
+## One-Shot Prompting
+
+One-shot prompting provides a single example demonstrating how the task should be performed.
+
+The example helps communicate the expected pattern to the model.
+
+## Few-Shot Prompting
+
+Few-shot prompting provides multiple examples.
+
+These examples can help the model understand:
+
+* The expected input
+* The expected output
+* The format
+* The desired pattern
+
+Few-shot prompting can be particularly useful when a task requires a specific response format or classification behavior.
+
+---
+
+# Prompt Templates
+
+Prompt templates allow prompts to be reused while dynamically changing specific pieces of information.
+
+For example:
+
+Classify the following customer message:
+
+{{customer_input}}
+
+The variable can be replaced with different input each time the application uses the prompt.
+
+Prompt templates provide several benefits:
+
+* Reusability
+* Consistency
+* Maintainability
+* Easier testing
+* Easier updates
+* Separation between prompt structure and user input
+
+This makes prompt templates useful when integrating Prompt Engineering into an actual application.
+
+---
+
+# Structured Outputs
+
+Generative AI applications may require responses in a structured format rather than plain text.
+
+For example, an application could request JSON containing:
+
+{
+    "category": "...",
+    "priority": "...",
+    "reason": "..."
+}
+
+Structured outputs can make it easier for an application to process model responses programmatically.
+
+However, applications should validate model-generated structured data before using it.
+
+Validation is important because a model response may not always follow the requested structure exactly.
+
+---
+
+# Retrieval-Augmented Generation
+
+Retrieval-Augmented Generation (RAG) combines information retrieval with Generative AI.
+
+Instead of relying only on information contained within the model, an application can retrieve relevant information from an external knowledge source and provide that information as context.
+
+A simplified RAG architecture is:
+
+
+User
+  ↓
+Application
+  ↓
+Retrieval
+  ↓
+Relevant Context
+  ↓
+Foundation Model
+  ↓
+Response
+
+RAG can be useful when an application needs to generate responses based on:
+
+* Company documents
+* Internal knowledge
+* External information
+* Specialized information
+* Frequently changing information
+
+For example, an organization could build an AI knowledge assistant that retrieves relevant company documentation before generating an answer.
+
+---
+
+# Combining RAG and Prompt Templates
+
+Prompt templates and RAG can be combined to create reusable AI application architectures.
+
+A template can contain variables for:
+
+* The user's question
+* Retrieved context
+* Instructions
+* Output requirements
+
+The application can dynamically insert the retrieved information into the prompt before sending the request to the foundation model.
+
+This allows the same prompt structure to be reused while the context changes based on the user's request.
+
+---
+
+# AI Application Architecture
+
+A basic Generative AI application can contain several components:
+
+User
+  ↓
+Application
+  ↓
+Prompt Template
+  ↓
+Foundation Model
+  ↓
+Response Validation
+  ↓
+Application Response
+
+RAG can be added when the application needs external or specialized information:
+
+User
+  ↓
+Application
+  ↓
+Retrieval
+  ↓
+Context
+  ↓
+Prompt Template
+  ↓
+Foundation Model
+  ↓
+Validation
+  ↓
+Response
+
+The architecture can be expanded with additional controls and services depending on the requirements of the application.
+
+---
+
+# Prompt Testing and Evaluation
+
+Prompt Engineering is an iterative process.
+
+A prompt should be tested using different types of inputs rather than relying on a single successful example.
+
+Testing can include:
+
+* Normal inputs
+* Ambiguous inputs
+* Long inputs
+* Unexpected inputs
+* Edge cases
+* Potentially malicious inputs
+
+The results can be evaluated using criteria such as:
+
+* Accuracy
+* Consistency
+* Output format
+* Response quality
+* Latency
+* Cost
+* Safety
+
+A simplified development process is:
+
+Design
+  ↓
+Test
+  ↓
+Measure
+  ↓
+Improve
+  ↓
+Test Again
+
+This iterative process helps identify weaknesses in prompts and allows them to be improved over time.
+
+---
+
+# Prompt Engineering Best Practices
+
+Several best practices were covered throughout the series.
+
+## Be Specific
+
+Prompts should clearly communicate the task the model is expected to perform.
+
+Avoid unnecessary ambiguity when a specific result is required.
+
+## Provide Relevant Context
+
+Providing relevant context can help the model understand the task and produce a more appropriate response.
+
+## Define the Expected Output
+
+The prompt should specify what the desired output should look like when a particular format is required.
+
+## Use Examples
+
+Examples can help demonstrate the expected input and output patterns.
+
+Few-shot prompting can be especially useful for tasks that require consistent formatting or classification.
+
+## Test Prompts
+
+Prompts should be tested against a variety of inputs.
+
+Testing should include normal cases as well as unexpected, ambiguous, edge, and potentially malicious inputs.
+
+---
+
+# Real-World Use Cases
+
+Prompt Engineering can be applied to many different Generative AI applications.
+
+Examples include:
+
+## Customer Support
+
+Prompts can guide AI systems to classify customer questions, summarize issues, or generate responses.
+
+## Summarization
+
+AI applications can use prompts to summarize documents, conversations, reports, or other information.
+
+## Classification
+
+Prompts can instruct models to classify information into predefined categories.
+
+## Information Extraction
+
+Models can be instructed to identify and extract specific information from unstructured text.
+
+## Content Generation
+
+Prompting can be used to generate different types of written content based on specified requirements.
+
+## Coding Assistants
+
+Prompt Engineering can help guide AI systems that assist with software development and programming tasks.
+
+## Enterprise Knowledge Assistants
+
+Prompting can be combined with RAG to allow AI applications to answer questions using organizational knowledge and documents.
+
+---
+
+# Prompt Injection
+
+Prompt injection is a security concern that occurs when untrusted input attempts to manipulate a model into ignoring or changing its intended behavior.
+
+For example, a user may provide instructions that attempt to override the application's original instructions.
+
+This creates a challenge because Large Language Models process instructions and data within the same overall context.
+
+Prompt Engineering alone should not be treated as a complete security boundary.
+
+---
+
+# Indirect Prompt Injection
+
+Indirect prompt injection occurs when malicious or unwanted instructions enter the model's context through external or retrieved information.
+
+For example:
+
+
+User
+  ↓
+Application
+  ↓
+Retrieval System
+  ↓
+External Document
+  ↓
+Potentially Untrusted Instructions
+  ↓
+Foundation Model
+
+
+Retrieved documents and external content should therefore be treated as potentially untrusted.
+
+This is especially important for applications that use RAG or other external data sources.
+
+---
+
+# Prompt Injection and AI Tools
+
+Prompt injection becomes more significant when an AI application has access to tools or external systems.
+
+Examples include:
+
+* Email systems
+* Databases
+* Files
+* APIs
+* Business applications
+* External services
+
+If an AI model can take actions through these tools, an unwanted instruction could potentially influence what the application attempts to do.
+
+This is why AI applications require security controls beyond the prompt itself.
+
+---
+
+# Security Considerations
+
+Prompt Engineering is not the same as application security.
+
+A secure AI application should use multiple layers of protection.
+
+## Treat Input as Untrusted
+
+User input should not automatically be considered trustworthy.
+
+Applications should validate and control how user-provided information is passed to AI systems.
+
+## Least Privilege
+
+AI applications should receive only the permissions required to perform their intended tasks.
+
+Access to sensitive systems and information should be restricted.
+
+## Validate Model Output
+
+Applications should not automatically trust model-generated output.
+
+The application should validate proposed actions or structured data before using them.
+
+## Restrict Tools
+
+AI applications should carefully control which tools a model can access.
+
+For each tool, developers should consider:
+
+* Does the model need access to the tool?
+* What data can the tool access?
+* What parameters can the model provide?
+* Does the action require approval?
+* What could happen if the tool is misused?
+
+## Human Oversight
+
+Sensitive actions may require human approval before they are executed.
+
+Human oversight can provide an additional layer of protection for actions involving important systems or business operations.
+
+---
+
+# Application Security Controls
+
+Production Generative AI applications may require:
+
+* Authentication
+* Authorization
+* Access controls
+* Input validation
+* Output validation
+* Tool restrictions
+* Monitoring
+* Logging
+* Human oversight
+
+Prompt instructions can help guide model behavior, but they should not replace these application-level security controls.
+
+---
+
+# AWS Services and Technologies Used
+
+## AWS Services
+
+* Amazon Bedrock
+* Foundation Models
+* Amazon Bedrock capabilities for Generative AI applications
+
+## Technologies and Concepts
+
+* Generative AI
+* Artificial Intelligence
+* Large Language Models
+* Prompt Engineering
+* System Prompts
+* Zero-Shot Prompting
+* One-Shot Prompting
+* Few-Shot Prompting
+* Prompt Templates
+* Structured Outputs
+* JSON
+* Retrieval-Augmented Generation
+* RAG
+* Tokens
+* Model Parameters
+* Prompt Latency
+* Prompt Injection
+* Indirect Prompt Injection
+* AI Security
+* Least Privilege
+* Output Validation
+* Tool Restrictions
+* Human Oversight
+
+## Programming Languages
+
+* [Add programming language if applicable]
+
+## Databases / Data Sources
+
+* [Add database or data source if applicable]
+
+---
+
+# Major Steps Completed
+
+During the Prompt Engineering portion of the AI Practitioner Series, I:
+
+* Learned the fundamentals of Prompt Engineering.
+* Studied the components of effective prompts.
+* Learned how Large Language Models generate text using tokens.
+* Studied system prompts.
+* Learned about temperature, Top P, Top K, maximum output length, and stop sequences.
+* Studied prompt latency.
+* Learned zero-shot prompting.
+* Learned one-shot prompting.
+* Learned few-shot prompting.
+* Implemented the concept of reusable prompt templates.
+* Studied structured JSON outputs.
+* Learned how to validate model-generated output.
+* Studied Retrieval-Augmented Generation.
+* Learned how RAG and prompt templates can work together.
+* Studied AI application architecture.
+* Learned how to test and evaluate prompts.
+* Studied real-world Prompt Engineering use cases.
+* Learned about prompt injection.
+* Studied indirect prompt injection.
+* Learned why external and retrieved content should be treated as potentially untrusted.
+* Studied least-privilege access.
+* Learned the importance of output validation.
+* Studied tool restrictions.
+* Learned why Prompt Engineering should not be treated as application security.
+* Studied the importance of authentication, authorization, access controls, monitoring, and human oversight.
+
+---
+
+# Architecture / Design
+
+Prompt Engineering can be incorporated into an AI application as a layer between the application and the foundation model.
+
+A simplified architecture is:
+
+User
+  ↓
+Application
+  ↓
+Prompt Template
+  ↓
+Foundation Model
+  ↓
+Validation
+  ↓
+Application
+  ↓
+User
+
+
+When external information is required, RAG can be incorporated:
+
+User
+  ↓
+Application
+  ↓
+Retrieval System
+  ↓
+Relevant Context
+  ↓
+Prompt Template
+  ↓
+Foundation Model
+  ↓
+Output Validation
+  ↓
+Application
+  ↓
+User
+
+Security controls should surround this architecture rather than relying only on the prompt.
+
+Potential security and implementation considerations include:
+
+* Untrusted user input
+* Untrusted retrieved content
+* Prompt injection
+* Indirect prompt injection
+* Excessive permissions
+* Unauthorized data access
+* Unsafe model-generated actions
+* Unrestricted tool access
+* Invalid structured output
+* Insufficient validation
+* Lack of monitoring
+* Lack of human approval for sensitive actions
+
+Problems can be addressed through testing, validation, appropriate access controls, least-privilege permissions, tool restrictions, monitoring, and human oversight.
+
+---
+
+# Results / Output
+
+The main result of this activity was developing a stronger understanding of how Prompt Engineering can be used when building Generative AI applications.
+
+I learned how prompt design can influence the behavior and output of Large Language Models and how different prompting techniques can be used for different tasks.
+
+I also developed a better understanding of:
+
+* Prompt Engineering
+* Prompt components
+* System prompts
+* Model parameters
+* Tokens
+* Zero-shot prompting
+* One-shot prompting
+* Few-shot prompting
+* Prompt templates
+* Structured outputs
+* Retrieval-Augmented Generation
+* Prompt testing
+* Prompt evaluation
+* Real-world AI use cases
+* Prompt injection
+* Indirect prompt injection
+* Least-privilege access
+* Output validation
+* Tool restrictions
+* Application security
+* Human oversight
+
+One of the most important concepts I learned was that Prompt Engineering is an iterative engineering process rather than simply creating one "perfect" prompt.
+
+A practical approach is:
+
+```text
+Define the Task
+      ↓
+Provide Context
+      ↓
+Define the Output
+      ↓
+Test
+      ↓
+Measure
+      ↓
+Improve
+      ↓
+Test Again
+```
+
+I also learned that prompt design and application security are separate concerns. While prompts can guide model behavior, production AI applications require additional security controls such as authentication, authorization, access controls, input and output validation, tool restrictions, monitoring, and human oversight.
+
+The Prompt Engineering series provided a foundation for understanding how prompts can be designed, implemented, evaluated, and secured within Generative AI applications.
+
+---
+
+# YouTube Links
+
+Video 4 - https://youtu.be/pNTE1DLx0zI
+
+Video 5 - https://youtu.be/gtkp8sBYU64
+
+Video 6 - https://youtu.be/raGxgUtlvfo
+
+---
+
+# LinkedIn Post Links
+
+Video 4 - [Add LinkedIn Post Link]
+
+Video 5 - [Add LinkedIn Post Link]
+
+Video 6 - [Add LinkedIn Post Link]
+
+---
+
+# References / Resources
+
+* AWS Amazon Bedrock Documentation
+* AWS Generative AI Documentation
+* AWS Skill Builder
+* AWS Certified AI Practitioner Learning Materials
+* Prompt Engineering learning materials and course resources
+* Amazon Bedrock and Generative AI documentation
 
