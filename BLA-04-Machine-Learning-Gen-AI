@@ -1,0 +1,482 @@
+
+# AI, Machine Learning, Deep Learning & Generative AI
+
+## Overview
+
+This repository documents my AI Practitioner Series covering the foundations of Artificial Intelligence, Machine Learning, Deep Learning, Generative AI, machine learning implementation, and machine learning algorithms.
+
+The purpose of this series is to develop a stronger understanding of how modern artificial intelligence systems work, how machine learning models learn from data, and how different models and algorithms can be selected for different problems.
+
+The series is divided into three parts:
+
+1. AI, Machine Learning, Deep Learning & Generative AI — Theory and Fundamentals
+2. Building a Machine Learning Model — Implementation and Learning Approaches
+3. Machine Learning Algorithms & How Models Learn — Algorithms and Model Learning
+
+The series progresses from foundational concepts into the process of building machine learning systems and then examines specific models and algorithms.
+
+---
+
+# Part 1: AI, Machine Learning, Deep Learning & Generative AI
+
+## Introduction
+
+The first video establishes the foundation for understanding Artificial Intelligence, Machine Learning, Deep Learning, and Generative AI.
+
+These technologies are closely related, but they are not interchangeable terms. Understanding their relationship is important when studying how modern AI systems are developed and deployed.
+
+## Topics Covered
+
+- Artificial Intelligence
+- AI systems
+- Data and AI
+- Machine Learning
+- Rule-Based AI
+- Deep Learning
+- Neural Networks
+- Generative AI
+- Foundation Models
+- Transformer Architecture
+- Large Language Models
+- Multimodal Models
+
+## Artificial Intelligence
+
+Artificial Intelligence is the broader field focused on developing systems capable of performing tasks that typically require human intelligence.
+
+These tasks can include:
+
+- Perception
+- Reasoning
+- Learning
+- Problem solving
+- Decision making
+
+AI can be applied to areas such as computer vision, fraud detection, facial recognition, and intelligent document processing.
+
+## Machine Learning
+
+Machine Learning is a type of Artificial Intelligence that allows systems to learn patterns from data.
+
+Instead of explicitly programming every rule that a system needs to follow, machine learning uses data and algorithms to develop models that can make predictions or decisions about new information.
+
+## Deep Learning
+
+Deep Learning is a specialized area of machine learning that uses neural networks with multiple layers.
+
+Deep learning is particularly useful for complex data and applications such as:
+
+- Computer vision
+- Natural language processing
+- Image classification
+- Object detection
+- Image segmentation
+
+## Generative AI
+
+Generative AI uses deep learning models to generate new content based on learned patterns.
+
+The video introduces several technologies associated with modern generative AI, including:
+
+- Foundation models
+- Transformers
+- Large Language Models
+- Multimodal models
+
+## Relationship Between the Concepts
+
+The relationship can be summarized as:
+
+AI → Machine Learning → Deep Learning → Generative AI
+
+Artificial Intelligence is the broad field.
+
+Machine Learning allows systems to learn from data.
+
+Deep Learning uses neural networks to learn complex patterns.
+
+Generative AI uses these capabilities to generate new content.
+
+---
+
+# Part 2: Building a Machine Learning Model
+
+## Introduction
+
+The second video moves from the theory of machine learning into the process of building machine learning systems.
+
+The video focuses on training data and the different approaches that can be used to train machine learning models.
+
+## Topics Covered
+
+- Training Data
+- Labeled Data
+- Unlabeled Data
+- Structured Data
+- Unstructured Data
+- Supervised Learning
+- Regression
+- Classification
+- Unsupervised Learning
+- Clustering
+- Association Rule Learning
+- Anomaly Detection
+- Semi-Supervised Learning
+- Self-Supervised Learning
+- Pretext Tasks
+- Reinforcement Learning
+- Reinforcement Learning from Human Feedback
+
+## Training Data
+
+Training data is one of the most important components of a machine learning system.
+
+The quality of the training data can directly affect the resulting model. Poor, incomplete, or inappropriate data can lead to poor model performance.
+
+This is represented by the principle:
+
+"Garbage in, garbage out."
+
+## Labeled and Unlabeled Data
+
+Labeled data contains input features along with corresponding output labels.
+
+For example, an image classification dataset could contain images as inputs and the corresponding image categories as labels.
+
+Unlabeled data contains input information without predefined output labels.
+
+The type of data available influences which machine learning approach can be used.
+
+## Supervised Learning
+
+Supervised learning uses labeled training data to learn a relationship between inputs and known outputs.
+
+Two major supervised learning tasks are:
+
+### Regression
+
+Regression is used to predict a numerical value.
+
+### Classification
+
+Classification is used to predict a category or class.
+
+The distinction can be summarized as:
+
+- Regression → Predicts a continuous numerical value
+- Classification → Predicts a category
+
+## Unsupervised Learning
+
+Unsupervised learning works with data that does not contain predefined output labels.
+
+The goal is to discover patterns, relationships, or structures within the data.
+
+Examples include:
+
+### Clustering
+
+Groups similar data points together.
+
+### Association Rule Learning
+
+Identifies relationships between items.
+
+### Anomaly Detection
+
+Identifies data points that significantly differ from normal behavior.
+
+## Semi-Supervised Learning
+
+Semi-supervised learning combines labeled and unlabeled data.
+
+This approach can be useful when only a small amount of labeled data is available while a much larger amount of unlabeled data exists.
+
+## Self-Supervised Learning
+
+Self-supervised learning allows a model to generate learning signals from the available data rather than requiring humans to manually label every example.
+
+Pretext tasks can be used to teach models useful representations of data.
+
+Examples include predicting:
+
+- Missing information
+- Future information
+- Obscured portions of data
+
+## Reinforcement Learning
+
+Reinforcement learning involves an agent interacting with an environment and learning through actions and rewards.
+
+Important concepts include:
+
+- Agent
+- Environment
+- Action
+- Reward
+- State
+- Policy
+
+The objective is for the agent to learn a strategy that maximizes cumulative rewards.
+
+## Reinforcement Learning from Human Feedback
+
+Reinforcement Learning from Human Feedback, or RLHF, incorporates human feedback into the learning process.
+
+Human evaluations can help guide models toward responses and behaviors that better align with human preferences and goals.
+
+---
+
+# Part 3: Machine Learning Algorithms & How Models Learn
+
+## Introduction
+
+The third video examines several machine learning models and algorithms and explains how models learn patterns from data.
+
+The video demonstrates that there is no single machine learning model that is appropriate for every problem.
+
+The appropriate model depends on factors such as:
+
+- The problem being solved
+- The available data
+- The type of information being processed
+- The requirements of the application
+
+## Models and Algorithms Covered
+
+- GPT
+- BERT
+- Recurrent Neural Networks
+- ResNet
+- Support Vector Machines
+- WaveNet
+- Generative Adversarial Networks
+- XGBoost
+- Neural Networks
+
+## GPT
+
+GPT stands for Generative Pre-trained Transformer.
+
+GPT models are associated with generative AI and transformer-based language models.
+
+They can generate text and computer code based on input prompts.
+
+## BERT
+
+BERT is a transformer-based language model designed for understanding language.
+
+BERT processes information bidirectionally, allowing it to consider context from both directions when processing text.
+
+## Recurrent Neural Networks
+
+Recurrent Neural Networks, or RNNs, are designed for sequential data where the order of information is important.
+
+Examples include:
+
+- Time-series data
+- Text
+- Speech
+
+## ResNet
+
+ResNet is a deep neural network associated with image recognition.
+
+Applications can include:
+
+- Image recognition
+- Object detection
+- Facial recognition
+
+## Support Vector Machines
+
+Support Vector Machines, or SVMs, are machine learning algorithms that can be used for classification and regression.
+
+SVMs provide an approach to machine learning that does not depend on the same neural-network architectures used by deep learning models.
+
+## WaveNet
+
+WaveNet is a model designed to generate raw audio waveforms.
+
+It demonstrates how machine learning models can be applied to audio generation and speech synthesis.
+
+## Generative Adversarial Networks
+
+Generative Adversarial Networks, or GANs, can generate synthetic data that resembles the training data.
+
+Potential applications include generating:
+
+- Images
+- Videos
+- Sounds
+
+GANs can also be used for data augmentation.
+
+## XGBoost
+
+XGBoost is an implementation of gradient boosting.
+
+Gradient boosting combines models to improve predictive performance.
+
+XGBoost demonstrates that machine learning includes approaches beyond deep neural networks.
+
+---
+
+# How Machine Learning Models Learn
+
+Neural networks contain nodes organized into layers.
+
+A typical neural network contains:
+
+- Input layer
+- Hidden layers
+- Output layer
+
+Information moves through the network from the input layer toward the output layer.
+
+As the network processes examples, it adjusts its internal parameters and learns patterns within the data.
+
+Different models are designed to learn different types of patterns.
+
+For example:
+
+- RNNs are associated with sequential information.
+- ResNet is associated with image recognition.
+- SVMs can be used for classification and regression.
+- WaveNet works with audio generation.
+- GANs can generate synthetic data.
+- GPT and BERT are associated with natural language processing.
+- XGBoost provides a gradient-boosting approach.
+
+The model should therefore be selected based on the problem, data, and application requirements.
+
+---
+
+# Key Takeaways
+
+This three-video series demonstrates that understanding AI requires more than learning individual algorithms.
+
+The major concepts covered throughout the series include:
+
+- Artificial Intelligence
+- Machine Learning
+- Deep Learning
+- Neural Networks
+- Generative AI
+- Foundation Models
+- Transformers
+- Large Language Models
+- Machine Learning Training Data
+- Supervised Learning
+- Unsupervised Learning
+- Semi-Supervised Learning
+- Self-Supervised Learning
+- Reinforcement Learning
+- GPT
+- BERT
+- RNNs
+- ResNet
+- SVMs
+- WaveNet
+- GANs
+- XGBoost
+
+One of the most important lessons from this series is that the data, learning approach, model, and application requirements all need to be considered when developing a machine learning system.
+
+---
+
+# Series Structure
+
+## Video 1 — AI, Machine Learning, Deep Learning & Generative AI: https://youtu.be/T6anNuDw52k?si=SQGGqSJNYNFLrI3s
+
+Covers the theoretical foundations of:
+
+- Artificial Intelligence
+- Machine Learning
+- Rule-Based AI
+- Deep Learning
+- Neural Networks
+- Generative AI
+- Foundation Models
+- Transformers
+- Large Language Models
+- Multimodal Models
+
+## Video 2 — Building a Machine Learning Model: https://youtu.be/s7lRh1UZLwo?si=KmITnKV24QgrrXK1
+
+Covers the implementation concepts behind:
+
+- Training Data
+- Labeled and Unlabeled Data
+- Structured and Unstructured Data
+- Supervised Learning
+- Regression
+- Classification
+- Unsupervised Learning
+- Clustering
+- Association Rule Learning
+- Anomaly Detection
+- Semi-Supervised Learning
+- Self-Supervised Learning
+- Reinforcement Learning
+- RLHF
+
+## Video 3 — Machine Learning Algorithms & How Models Learn: https://youtu.be/5W6mY8KXTmk?si=IowmZhsZeLv0JElV
+
+Covers:
+
+- GPT
+- BERT
+- RNNs
+- ResNet
+- SVMs
+- WaveNet
+- GANs
+- XGBoost
+- Neural Networks
+- Pattern Learning
+- Model Selection
+
+---
+
+# Purpose of the Series
+
+The purpose of this series is to document my continued learning in Artificial Intelligence and Machine Learning while building a stronger technical foundation for working with modern AI technologies.
+
+Rather than focusing only on individual AI tools, the series focuses on understanding the underlying concepts, learning approaches, models, and architectures that make modern AI systems possible.
+
+This progression provides a foundation for continuing into more advanced topics such as Generative AI, foundation models, large language models, cloud-based AI services, and practical AI application development.
+
+---
+
+# References
+
+1. IBM. "What Is Artificial Intelligence (AI)?" IBM Think. Provides an overview of AI, machine learning, deep learning, and generative AI.  
+   [IBM — What Is Artificial Intelligence?](https://www.ibm.com/think/topics/artificial-intelligence?src_trk=em66fce8f1eca5d5.68087810979705245&utm_source=chatgpt.com)
+
+2. IBM. "AI vs. Machine Learning vs. Deep Learning vs. Neural Networks." IBM Think. Provides an explanation of the relationship between AI, machine learning, deep learning, and neural networks.  
+   [IBM — AI vs. Machine Learning vs. Deep Learning vs. Neural Networks](https://www.ibm.com/think/topics/ai-vs-machine-learning-vs-deep-learning-vs-neural-networks?utm_source=chatgpt.com)
+
+3. IBM. "What Is Machine Learning?" IBM Think. Covers machine learning, training data, algorithms, and learning from patterns.  
+   [IBM — What Is Machine Learning?](https://www.ibm.com/think/topics/machine-learning?src_trk=em66e05f2bdd87d2.174498761443716362&utm_source=chatgpt.com)
+
+4. IBM. "What Is Generative AI?" IBM Think. Provides background on generative AI, deep learning, foundation models, and transformers.  
+   [IBM — What Is Generative AI?](https://www.ibm.com/think/topics/generative-ai?cm_sp=ibmdev-_-developer-articles-_-ibmcom&utm_source=chatgpt.com)
+
+5. AWS. "What Are Foundation Models?" Amazon Web Services. Covers foundation models, generative AI, transformers, GPT, BERT, and self-supervised learning.  
+   [AWS — What Are Foundation Models?](https://aws.amazon.com/what-is/foundation-models/?utm_source=chatgpt.com)
+
+6. Vaswani, A., Shazeer, N., Parmar, N., et al. "Attention Is All You Need." arXiv, 2017. Introduces the Transformer architecture that became foundational to modern transformer-based language models.  
+   [Attention Is All You Need — arXiv](https://arxiv.org/abs/1706.03762?utm_source=chatgpt.com)
+
+---
+
+# Conclusion
+
+Artificial Intelligence encompasses a broad range of technologies and approaches.
+
+Machine learning allows systems to learn patterns from data, while deep learning uses multilayer neural networks to process more complex patterns. Generative AI builds upon these technologies to generate new content using powerful models such as transformers and foundation models.
+
+Understanding these relationships provides an important foundation for continuing to study modern AI systems and their practical applications.
+
+This series represents another step in my continued development of technical knowledge in Artificial Intelligence, Machine Learning, Deep Learning, and Generative AI.
