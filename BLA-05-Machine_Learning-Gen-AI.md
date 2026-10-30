@@ -154,4 +154,7 @@ Deployment is **not the final step**. Production data distributions evolve over 
    - Video 1: https://youtu.be/1MPcikBOVI8
    - Video 2: https://youtu.be/o2LrM_39jvQ
    - Video 3: https://youtu.be/0_q2_I4aNAc
-  - LinkedIn: 
+  - LinkedIn:
+  - Post 1: https://lnkd.in/p/gBKUUZZH
+  - Post 2: https://lnkd.in/p/gF4JQU6T
+  - Post 3: https://lnkd.in/p/grAD25HC
