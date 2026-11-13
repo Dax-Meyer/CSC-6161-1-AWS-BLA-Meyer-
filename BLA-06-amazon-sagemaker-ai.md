@@ -214,6 +214,12 @@ A successful machine learning solution requires attention to the model itself as
 - AWS IAM, VPC, and KMS
 - Amazon Rekognition, Comprehend, and Textract
 
-## Disclaimer
+## Youtube
+- Video 1: https://youtu.be/BQ_wcpjXhuM?si=5d_QgJfUIOn19lL_
+- Video 2: https://youtu.be/mFLswHhy1do?si=Cbc0qRqtC39CqwzD
+- Video 3: https://youtu.be/b5ucAeg4YEc?si=lQ4H6YyIc9Uew1xM
 
-This repository is an educational overview of Amazon SageMaker AI concepts and related AWS services. It is not a substitute for current AWS documentation, security review, or workload-specific architecture guidance. Service capabilities and names can change; consult the official AWS documentation when implementing solutions.
+## LinkedIn
+- Post 1: https://lnkd.in/p/g28vcgYF
+- Post 2: https://lnkd.in/p/gQ6sKrkK
+- Post 3: https://lnkd.in/p/gy7JrC-e
